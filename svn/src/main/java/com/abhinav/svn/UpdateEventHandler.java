@@ -46,13 +46,13 @@ public class UpdateEventHandler implements ISVNEventHandler {
     	
 	}
 
-	private List<List<String>> populateFileNames() {
+	public List<List<String>> populateFileNames() {
 		List<List<String>> files = new LinkedList<List<String>>();
 		String patchFolderPath = path + "\\Patch\\PHIX2.0_PH1_RC_1.0";
 		String patchProdFolderPath = path + "\\patch-prod\\PHIX2.0_PH1_RC_1.7";
 		if (path.contains("microservices")) {
 			patchFolderPath = path + "\\patch";
-			patchProdFolderPath = path + "\\patch";
+			patchProdFolderPath = path + "\\patch-prod";
 		}
 
 		String[] patchFolderFiles = new File(patchFolderPath).list();
